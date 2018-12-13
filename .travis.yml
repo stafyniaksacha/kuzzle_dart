@@ -12,10 +12,12 @@ before_script:
   - sysctl -w vm.max_map_count=262144
   - docker-compose up -d
   - until curl "http://localhost:7512/?pretty"; do sleep 10; done
+  - curl -X POST "http://localhost:7512/_createFirstAdmin" --data '{"content":{"name":"admin"},"credentials": {"local": {"username": "admin", "password": "admin"}}}' -H "Content-Type: application/json"
   - cd ../
 
 script:
   - dartanalyzer lib test --fatal-warnings
+  - pub run test  test/authentication_test.dart
   - pub run test_coverage -j 1
 
 after_success:
