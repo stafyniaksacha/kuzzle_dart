@@ -83,6 +83,7 @@ Future<void> kuzzleConnections() async {
   kuzzle.disconnect();
 }
 
+
 void main() {
   const shouldExit = true;
   if (!shouldExit) {
