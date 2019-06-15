@@ -1,7 +1,7 @@
 name: kuzzle
-version: 1.0.0-alpha.2
+version: 1.0.0-alpha.4
 
-description: A library to communicate with kuzzle API
+description: A library to interact with kuzzle API. A backend software, self-hostable and ready to use to power modern cross-platform apps.
 authors:
 - Priyanshu Jindal<priyanshujindal1995@gmail.com>
 - Sacha Stafyniak<sacha.stafyniak@gmail.com>
